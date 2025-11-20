@@ -1,5 +1,5 @@
 ---
-title: "Benjamin Basseri"
+title: "Blog posts"
 listing:
   contents: posts
   sort: "date desc"
@@ -7,7 +7,3 @@ listing:
   categories: true
   feed: true
 ---
-
-Under development.
-
-## Latest Posts

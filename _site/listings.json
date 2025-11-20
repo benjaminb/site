@@ -1,0 +1,18 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/proof-by-contradiction/index.html",
+      "/posts/russells_paradox/russells_paradox.html",
+      "/posts/test-post/foo.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/proof-by-contradiction/index.html",
+      "/posts/russells_paradox/russells_paradox.html",
+      "/posts/test-post/foo.html"
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+---
+title: "Testing features"
+---
+
+# Heading 1
+
+* Some bullet list
+* `with code() inline`
+
+#### Displaying Python (but not executing it)
+
+```python
+def foo():
+    print('hi!')
+```
+
+#### Display & output
+```{python, echo=TRUE, message=TRUE}
+def test():
+    print("Did this print?")
+
+test()
+```
+
+#### LaTeX
+
+We try some inline math like $f(x) = x^2 \sin x$ and some equation centered:
+$$1 = \sin^2 x + \cos^2 x$$

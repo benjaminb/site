@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://benjaminb.github.io/test_features.html</loc>
+    <lastmod>2025-11-09T19:45:34.043Z</lastmod>
+  </url>
+  <url>
+    <loc>https://benjaminb.github.io/posts/test-post/foo.html</loc>
+    <lastmod>2025-11-09T20:03:19.197Z</lastmod>
+  </url>
+  <url>
+    <loc>https://benjaminb.github.io/index.html</loc>
+    <lastmod>2025-11-09T20:02:48.387Z</lastmod>
+  </url>
+  <url>
+    <loc>https://benjaminb.github.io/about.html</loc>
+    <lastmod>2025-11-06T02:01:53.483Z</lastmod>
+  </url>
+  <url>
+    <loc>https://benjaminb.github.io/blog.html</loc>
+    <lastmod>2025-11-09T20:15:13.688Z</lastmod>
+  </url>
+  <url>
+    <loc>https://benjaminb.github.io/posts/russells_paradox/russells_paradox.html</loc>
+    <lastmod>2025-11-09T20:09:35.180Z</lastmod>
+  </url>
+  <url>
+    <loc>https://benjaminb.github.io/posts/proof-by-contradiction/index.html</loc>
+    <lastmod>2025-11-19T20:10:48.590Z</lastmod>
+  </url>
+</urlset>

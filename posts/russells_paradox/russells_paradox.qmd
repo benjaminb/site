@@ -1,0 +1,16 @@
+---
+title: "Russell's Paradox and How We Fixed It"
+draft: false
+date: "2025-11-09"
+description: "How was Russell's Paradox resolved"
+abstract: "Many introductory books bring up Russell's Paradox, and typically resolve it by saying 'just ban all such sets'. However, the actual resolution most mathematicians accept is from the ZF axioms and is more interesting because it also bans nested containent and cyclical containment"
+---
+
+* Many people have heard of Russell's paradox, it's presented in intro books all the time
+* The paradox shows that with simple, intuitive rules (axioms) for set theory, we can construct an impossible set (that is, derive a contradiction)
+* Most books hand-waive this away by saying something like 'so we just ban such sets'
+* But that's not actually how set theory resolved the issue
+* What does Russell's paradox state?
+* What is the problem with having such a set?
+* What is the currently accepted solution (ZF set theory)
+* Why is this the solution?

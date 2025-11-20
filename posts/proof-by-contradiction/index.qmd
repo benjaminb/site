@@ -1,0 +1,133 @@
+---
+title: "Irrational Numbers Proof Techniques"
+draft: false
+---
+
+Explain what it is
+
+Usually we do sqrt 2 and call it a day
+However this proof as it's usually presented usually skips a lot of details making it hard to generalize the principle. It finds a contradiction in parity between a and b
+Example: what happens if you try to prove root 3 is irrational?
+what happens when you try to prove root 6 is irrational?
+
+Prove e is irrational by contradiction
+Prove π is irrational?
+
+The proof that $\sqrt{2}$ is irrational comes up in many places, often when explaining what a proof by contradiction is. Typically the proof goes like this: assume $\sqrt{2}$ is rational, so it can be written as $a/b$ which is a ratio of integers in lowest terms. You then demonstrated that both $a$ and $b$ are even, which contradicts the assumption that $a/b$ was in lowest terms to begin with.
+
+The problem with proofs by contradiction is that often the original assumptions are not clearly stated. Or really, there are *consequences* of the initial assumptions that get contradicted not the assumptions themselves. 
+
+While this works fine for $\sqrt{2}$ it doesn't do much to help the student if they have to prove other numbers are irrational, such as $\sqrt{3}$ or $e$. In this post we'll dig a little deeper into the proof that $\sqrt{2}$ is irrational and use that to find principles and technqiues that will help with proofs that other numbers are irrational.
+
+### Proof that $\sqrt{2}$ is irrational
+
+So in the $\sqrt{2}$ example, start of by assuming towards a contradiction that $\sqrt{2}$ is rational. Then you can write it as a fraction of two integers $a/b$. In fact we can assume something stronger: that $a/b$ is in *lowest terms*. 
+$$\sqrt{2} = \frac{a}{b} \text{ in lowest terms}$$
+
+\begin{align*}
+\sqrt{2} &= \frac{a}{b} & \text{by assumption}\\
+2 &= \frac{a^2}{b^2} & \text{square both sides}\\
+2b^2 &= a^2 & \text{multiply by $b^2$}
+\end{align*}
+
+Since $2b^2 = a^2$, this means $a^2$ is even, which requires that $a$ is even\*. So $a = 2c$ for some integer $c$. Then $a^2 = 4c^2$. Plugging that back in shows:
+
+$$2b^2 = 4c^2 \stackrel{\text{divide by 2}}{\implies} b^2 = 2c^2$$
+
+This shows that $b^2$ is even, which requires that $b$ is even. So we have that both $a$ and $b$ are even, but this **contradicts** the assumption that they were in lowest terms.
+
+*Basic algebra is used in all the steps above except one: the fact that if a square is even, so is its root. Knowing that this is a step in the proof, we could go ahead and prove that fact. But if a student didn't know this fact it would be difficult to discover that this was the next step to take. But let's see if this helps us prove other numbers' irrationality.
+
+### Does this technique generalize?
+
+Let's try to prove $\sqrt{3}$ is irrational. Repeat the previous techniques and see if it takes us to a valid proof:
+
+Assume towards a contradiction that $\sqrt{3}$ is rational. Then there are integers $a, b$ such that $\sqrt{3} = \frac{a}{b}$ and $a, b$ are in lowest terms. Then
+
+\begin{align*}
+\sqrt{3} &= \frac{a}{b} &\text{by assumption}\\
+3 &= \frac{a^2}{b^2} &\text{square both sides}\\
+3b^2 &= a^2 &\text{multiply by $b^2$}
+\end{align*}
+
+Now you have $3b^2 = a^2$, similar to the previous proof. This doesn't imply that $a^2$ is even, and neither does it imply $a^2$ is odd. It only imples that $a^2$ has a factor of 3 (so does 36, which is even, and 9 which is not).
+
+To complete this proof we could claim that if 3 divides $a^2$ then 3 must divide $a$. So the previous proof technique doesn't get us all the way to a complete proof here. If 3 does divide $a$ then we can continue as with the previous proof:
+$$3 \mid a \implies 9 \mid a^2 \implies a^2 = 9c \implies b^2 = 3a^2$$
+
+Now 3 divides $b^2$ and using our theorem, 3 divides $b$ as well. This gives us the contradiction that both $a$ and $b$ had a factor of 3 but also they had no common factors.
+
+So if we can prove the theorem, the whole proof works. We seek to prove:
+
+$$3 \mid a^2 \implies 3 \mid a$$
+
+You might suspect that it's easier to say something about $a^2$ if we know something about $a$ rather than the other way around, so form the contrapositive statement that allows us to start with $a$:
+$$3 \not\mid a \implies 3 \not\mid a^2$$
+
+However there's a more general principle that students working at this level ought to know: the (Fundamental Theorem of Arithmetic)[https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic].  
+
+#### The Fundmamental Theorem of Arithmetic
+
+It's hard to immediately see why $a^2$ being even requires $a$ to be even. We can prove this as a little lemma for ourselves, but if we had to write a proof by contradiction rather than study the existing one above, it might not be clear to even do this.
+
+The more fundamental principle here is the (Fundamental Theorem of Arithmetic)[https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic]. This tells us that any natural number has a unique representation as a product of primes each raised to some power:
+$$n = \prod_{j=1}^\infty p_j^{e_j}$$
+
+where $p_j$ is the $j$th prime number (2 is the first, 3 is the second, and so on) and $e_j$ is the exponent for that prime. For example, the *only* way to write 3 as a product of primes is $2^0 \cdot 3^1 \cdot 5^0 \cdot \ldots$; for 6 the product is $2^1 \cdot 3^1 \cdot 5^0 \cdot \ldots$. 
+
+Now back in the proof we had $2b^2 = a^2$, so it behooves us to figure out something about $a^2$ or $b^2$. Think about what happens to that prime product representation if you square it. Every (non-zero) exponent gets doubled:
+$$(p_1^{e_1}\cdot p_2^{e_2} \cdot \ldots \cdot p_n^{e_n})^2 = p_1^{2e_1} \cdot p_2^{2e_2} \cdot \ldots \cdot p_n^{2e_n}$$
+
+*This* is why if $a^2$ is even then $a$ is even and $a^2$ has a factor of 4. Because if $a^2$ is even then it has 2 in its prime product, with an exponent of at least 2. To say $a^2$ is even means in its prime product the exponent on 2 must be at least 1, and because it's a square we know its exponent is double its root's exponent. This means $a^2$ has a factor of $2^2 = 4$
+
+### Repeating this proof for $\sqrt{6}$
+
+Now, armed with FTOA, let's prove $\sqrt{6}$ is irrational. Assume towards a contradiction that $\sqrt{6}$ is irrational. Then there are natural numbers $a, b$ such that $\sqrt{6} = a/b$ with $a$ and $b$ having no common factors. As in the previous proofs, square both sides and move $b^2$ to get $6b^2 = a^2$. From this we have $2\cdot3\cdot b^2 = a^2$. Now using what we know from the FTOA we know that $a^2$ must have factors of 2 and 3, and since it's a square it must have factors of 4 and 9. So $6b^2 = 36c$ for some integer $c$, or more simply $b^2 = 6c$, showing $b^2$ also has a factor of 6. This means both $a$ and $b$ have factors of 6 and they both have no common factors, a contradiction.
+
+### Proving that $e$ is irrational
+
+To prove $e$ is irrational requires a bit more work but has a similar setup. First, let's define $e$ by its series expansion and assume towards a contradiction that it's rational, equal to $a/b$ in lowest terms:
+
+$$e = \sum_{n=0}^\infty \frac{1}{n!} = \frac{a}{b}$$
+
+If we clear the denominator on the right by multiplying across by $b$ we get:
+
+$$eb = \sum_{n=0}^\infty \frac{b}{n!} = a$$
+
+Now what's interesting about this is that $eb$ must be an integer, since it's equal to $a$, and so must the series even though its terms have an $n!$ in the denominator. To achieve some more cancelation multiply by $b!$ instead of $b$, which still us with an integer:
+
+$$eb! = \sum{n=0}^\infty \frac{b!}{n!} = a(b-1)! \in \mathbb{Z}$$
+
+We don't know the value $b$, but we know it's an integer at least 1. So some of the series terms will have $n \leq b$ and after that, we'll have all $n > b$. So split the series into those two cases:
+
+$$\sum_{n=0}^b \frac{b!}{n!} + \sum_{k=1}^\infty \frac{b!}{(b+k)!}$$
+
+When $n \leq b$ the fraction $\frac{b!}{(b+k)!}$ is an integer. So the sum on the left is a sum of integers and must also be an integer. That means the sum on the right has to be an integer; if not then it would contradict the result that $eb!$ is an integer. 
+
+For the series on the right we have some constant numerator $b!$ and an ever-increasing denominator $(b+k)!$ which means all these terms are greater than 0 but less than 1. Of course, some series do evaluate to integers so we have to prove this one doesn't in order to contradict that $eb! \in \mathbb{Z}$. 
+
+You might notice that the denominator has factorial growth, which is extremely fast. And since this happens in the denominator it means the terms will get very small, very quickly. You might suspect that it converges to something less than 1, which means it isn't an integer, and that would be our contradiction.
+
+First, notice that since the denominator is a higher factorial than the numerator we can cancel out terms:
+$$\frac{b!}{(b+k)!} = \frac{1}{(b+1)\ldots(b+k)}$$
+
+If we change the denominator so all the factors are $(b+1)$ then the denominator becomes smaller, which makes the value bigger. This gives us the relation:
+
+$$\frac{1}{(b+1)\ldots (b+k)} \leq \frac{1}{(b+1)^k}$$
+
+With equality only when $k = 1$. In our series $k$ just starts at 1 then goes on to infinity, so we have a strict inequality between the sums: 
+
+$$\sum_{k=1}^\infty \frac{b!}{(b+k)!} \leq \sum_{k=1}^\infty \frac{1}{(b+1)^k}$$
+
+Notice the sum on the right is nearly a geometric series, only missing the $k = 0$ term. That term would simply evaluate to 1, so express the sum in terms of a geometric series:
+
+$$\sum_{k=1}^\infty \frac{1}{(b+1)^k} = \sum_{k=0}^\infty \frac{1}{(b+1)^k} - 1 = \frac{1}{1 - \frac{1}{b+1}} - 1$$
+
+Do some algebra to simplify the result:
+
+$$\frac{1}{1 - \frac{1}{b+1}}\cdot\frac{b+1}{b+1} - 1\cdot\frac{b}{b} = \frac{b+1}{b} - \frac{b}{b} = \frac{1}{b}$$
+$$\implies 0 <  \sum_{k=0}^\infty \frac{b!}{(b+k)!} < \frac{1}{b}$$
+
+And here is our contradiction: the head sum plus the tail sum must be an integer and the head sum is an integer, but the tail sum is strictly between 0 and 1. This is a contradiction, because if the tail sum is less than 1 then adding it to the head sum will not make it an integer.
+
+### Proving that $\pi$ is irrational

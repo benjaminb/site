@@ -1,13 +1,20 @@
 project:
   type: website
+  render:
+    - "*"
 
+jupyter: web
+      
 website:
-  title: "Benjamin Basseri"
+  title: 'Benjamin Basseri'
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - href: blog.qmd
+        text: Blog
+  site-url: https://benjaminb.github.io
 
 format:
   html:
@@ -16,6 +23,3 @@ format:
       - brand
     css: styles.css
     toc: true
-
-
-
