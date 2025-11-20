@@ -1,6 +1,6 @@
 ---
 title: "Russell's Paradox and How We Fixed It"
-draft: false
+draft: true
 date: "2025-11-09"
 description: "How was Russell's Paradox resolved"
 abstract: "Many introductory books bring up Russell's Paradox, and typically resolve it by saying 'just ban all such sets'. However, the actual resolution most mathematicians accept is from the ZF axioms and is more interesting because it also bans nested containent and cyclical containment"

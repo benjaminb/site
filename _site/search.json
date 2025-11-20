@@ -39,14 +39,7 @@
     "href": "blog.html",
     "title": "Blog posts",
     "section": "",
-    "text": "Irrational Numbers Proof Techniques\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRussell’s Paradox and How We Fixed It\n\n\nHow was Russell’s Paradox resolved\n\n\n\n\n\nNov 9, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nTest post page\n\n\nWe have a little description here…\n\n\n\n\n\nNov 9, 2025\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/russells_paradox/russells_paradox.html",
-    "href": "posts/russells_paradox/russells_paradox.html",
-    "title": "Russell’s Paradox and How We Fixed It",
-    "section": "",
-    "text": "Many people have heard of Russell’s paradox, it’s presented in intro books all the time\nThe paradox shows that with simple, intuitive rules (axioms) for set theory, we can construct an impossible set (that is, derive a contradiction)\nMost books hand-waive this away by saying something like ‘so we just ban such sets’\nBut that’s not actually how set theory resolved the issue\nWhat does Russell’s paradox state?\nWhat is the problem with having such a set?\nWhat is the currently accepted solution (ZF set theory)\nWhy is this the solution?"
+    "text": "Test post page\n\n\nWe have a little description here…\n\n\n\n\n\nNov 9, 2025\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/proof-by-contradiction/index.html",

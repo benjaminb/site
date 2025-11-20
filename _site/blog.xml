@@ -12,31 +12,6 @@
 <generator>quarto-1.8.25</generator>
 <lastBuildDate>Sun, 09 Nov 2025 05:00:00 GMT</lastBuildDate>
 <item>
-  <title>Russell’s Paradox and How We Fixed It</title>
-  <link>https://benjaminb.github.io/posts/russells_paradox/russells_paradox.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<ul>
-<li>Many people have heard of Russell’s paradox, it’s presented in intro books all the time</li>
-<li>The paradox shows that with simple, intuitive rules (axioms) for set theory, we can construct an impossible set (that is, derive a contradiction)</li>
-<li>Most books hand-waive this away by saying something like ‘so we just ban such sets’</li>
-<li>But that’s not actually how set theory resolved the issue</li>
-<li>What does Russell’s paradox state?</li>
-<li>What is the problem with having such a set?</li>
-<li>What is the currently accepted solution (ZF set theory)</li>
-<li>Why is this the solution?</li>
-</ul>
-
-
-
- ]]></description>
-  <guid>https://benjaminb.github.io/posts/russells_paradox/russells_paradox.html</guid>
-  <pubDate>Sun, 09 Nov 2025 05:00:00 GMT</pubDate>
-</item>
-<item>
   <title>Test post page</title>
   <link>https://benjaminb.github.io/posts/test-post/foo.html</link>
   <description><![CDATA[ 
@@ -54,88 +29,6 @@
  ]]></description>
   <guid>https://benjaminb.github.io/posts/test-post/foo.html</guid>
   <pubDate>Sun, 09 Nov 2025 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Irrational Numbers Proof Techniques</title>
-  <link>https://benjaminb.github.io/posts/proof-by-contradiction/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Explain what it is</p>
-<p>Usually we do sqrt 2 and call it a day However this proof as it’s usually presented usually skips a lot of details making it hard to generalize the principle. It finds a contradiction in parity between a and b Example: what happens if you try to prove root 3 is irrational? what happens when you try to prove root 6 is irrational?</p>
-<p>Prove e is irrational by contradiction Prove π is irrational?</p>
-<p>The proof that <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D"> is irrational comes up in many places, often when explaining what a proof by contradiction is. Typically the proof goes like this: assume <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D"> is rational, so it can be written as <img src="https://latex.codecogs.com/png.latex?a/b"> which is a ratio of integers in lowest terms. You then demonstrated that both <img src="https://latex.codecogs.com/png.latex?a"> and <img src="https://latex.codecogs.com/png.latex?b"> are even, which contradicts the assumption that <img src="https://latex.codecogs.com/png.latex?a/b"> was in lowest terms to begin with.</p>
-<p>The problem with proofs by contradiction is that often the original assumptions are not clearly stated. Or really, there are <em>consequences</em> of the initial assumptions that get contradicted not the assumptions themselves.</p>
-<p>While this works fine for <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D"> it doesn’t do much to help the student if they have to prove other numbers are irrational, such as <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B3%7D"> or <img src="https://latex.codecogs.com/png.latex?e">. In this post we’ll dig a little deeper into the proof that <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D"> is irrational and use that to find principles and technqiues that will help with proofs that other numbers are irrational.</p>
-<section id="proof-that-sqrt2-is-irrational" class="level3">
-<h3 class="anchored" data-anchor-id="proof-that-sqrt2-is-irrational">Proof that <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D"> is irrational</h3>
-<p>So in the <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D"> example, start of by assuming towards a contradiction that <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D"> is rational. Then you can write it as a fraction of two integers <img src="https://latex.codecogs.com/png.latex?a/b">. In fact we can assume something stronger: that <img src="https://latex.codecogs.com/png.latex?a/b"> is in <em>lowest terms</em>. <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B2%7D%20=%20%5Cfrac%7Ba%7D%7Bb%7D%20%5Ctext%7B%20in%20lowest%20terms%7D"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Csqrt%7B2%7D%20&amp;=%20%5Cfrac%7Ba%7D%7Bb%7D%20&amp;%20%5Ctext%7Bby%20assumption%7D%5C%5C%0A2%20&amp;=%20%5Cfrac%7Ba%5E2%7D%7Bb%5E2%7D%20&amp;%20%5Ctext%7Bsquare%20both%20sides%7D%5C%5C%0A2b%5E2%20&amp;=%20a%5E2%20&amp;%20%5Ctext%7Bmultiply%20by%20$b%5E2$%7D%0A%5Cend%7Balign*%7D"></p>
-<p>Since <img src="https://latex.codecogs.com/png.latex?2b%5E2%20=%20a%5E2">, this means <img src="https://latex.codecogs.com/png.latex?a%5E2"> is even, which requires that <img src="https://latex.codecogs.com/png.latex?a"> is even*. So <img src="https://latex.codecogs.com/png.latex?a%20=%202c"> for some integer <img src="https://latex.codecogs.com/png.latex?c">. Then <img src="https://latex.codecogs.com/png.latex?a%5E2%20=%204c%5E2">. Plugging that back in shows:</p>
-<p><img src="https://latex.codecogs.com/png.latex?2b%5E2%20=%204c%5E2%20%5Cstackrel%7B%5Ctext%7Bdivide%20by%202%7D%7D%7B%5Cimplies%7D%20b%5E2%20=%202c%5E2"></p>
-<p>This shows that <img src="https://latex.codecogs.com/png.latex?b%5E2"> is even, which requires that <img src="https://latex.codecogs.com/png.latex?b"> is even. So we have that both <img src="https://latex.codecogs.com/png.latex?a"> and <img src="https://latex.codecogs.com/png.latex?b"> are even, but this <strong>contradicts</strong> the assumption that they were in lowest terms.</p>
-<p>*Basic algebra is used in all the steps above except one: the fact that if a square is even, so is its root. Knowing that this is a step in the proof, we could go ahead and prove that fact. But if a student didn’t know this fact it would be difficult to discover that this was the next step to take. But let’s see if this helps us prove other numbers’ irrationality.</p>
-</section>
-<section id="does-this-technique-generalize" class="level3">
-<h3 class="anchored" data-anchor-id="does-this-technique-generalize">Does this technique generalize?</h3>
-<p>Let’s try to prove <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B3%7D"> is irrational. Repeat the previous techniques and see if it takes us to a valid proof:</p>
-<p>Assume towards a contradiction that <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B3%7D"> is rational. Then there are integers <img src="https://latex.codecogs.com/png.latex?a,%20b"> such that <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B3%7D%20=%20%5Cfrac%7Ba%7D%7Bb%7D"> and <img src="https://latex.codecogs.com/png.latex?a,%20b"> are in lowest terms. Then</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Csqrt%7B3%7D%20&amp;=%20%5Cfrac%7Ba%7D%7Bb%7D%20&amp;%5Ctext%7Bby%20assumption%7D%5C%5C%0A3%20&amp;=%20%5Cfrac%7Ba%5E2%7D%7Bb%5E2%7D%20&amp;%5Ctext%7Bsquare%20both%20sides%7D%5C%5C%0A3b%5E2%20&amp;=%20a%5E2%20&amp;%5Ctext%7Bmultiply%20by%20$b%5E2$%7D%0A%5Cend%7Balign*%7D"></p>
-<p>Now you have <img src="https://latex.codecogs.com/png.latex?3b%5E2%20=%20a%5E2">, similar to the previous proof. This doesn’t imply that <img src="https://latex.codecogs.com/png.latex?a%5E2"> is even, and neither does it imply <img src="https://latex.codecogs.com/png.latex?a%5E2"> is odd. It only imples that <img src="https://latex.codecogs.com/png.latex?a%5E2"> has a factor of 3 (so does 36, which is even, and 9 which is not).</p>
-<p>To complete this proof we could claim that if 3 divides <img src="https://latex.codecogs.com/png.latex?a%5E2"> then 3 must divide <img src="https://latex.codecogs.com/png.latex?a">. So the previous proof technique doesn’t get us all the way to a complete proof here. If 3 does divide <img src="https://latex.codecogs.com/png.latex?a"> then we can continue as with the previous proof: <img src="https://latex.codecogs.com/png.latex?3%20%5Cmid%20a%20%5Cimplies%209%20%5Cmid%20a%5E2%20%5Cimplies%20a%5E2%20=%209c%20%5Cimplies%20b%5E2%20=%203a%5E2"></p>
-<p>Now 3 divides <img src="https://latex.codecogs.com/png.latex?b%5E2"> and using our theorem, 3 divides <img src="https://latex.codecogs.com/png.latex?b"> as well. This gives us the contradiction that both <img src="https://latex.codecogs.com/png.latex?a"> and <img src="https://latex.codecogs.com/png.latex?b"> had a factor of 3 but also they had no common factors.</p>
-<p>So if we can prove the theorem, the whole proof works. We seek to prove:</p>
-<p><img src="https://latex.codecogs.com/png.latex?3%20%5Cmid%20a%5E2%20%5Cimplies%203%20%5Cmid%20a"></p>
-<p>You might suspect that it’s easier to say something about <img src="https://latex.codecogs.com/png.latex?a%5E2"> if we know something about <img src="https://latex.codecogs.com/png.latex?a"> rather than the other way around, so form the contrapositive statement that allows us to start with <img src="https://latex.codecogs.com/png.latex?a">: <img src="https://latex.codecogs.com/png.latex?3%20%5Cnot%5Cmid%20a%20%5Cimplies%203%20%5Cnot%5Cmid%20a%5E2"></p>
-<p>However there’s a more general principle that students working at this level ought to know: the (Fundamental Theorem of Arithmetic)[https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic].</p>
-<section id="the-fundmamental-theorem-of-arithmetic" class="level4">
-<h4 class="anchored" data-anchor-id="the-fundmamental-theorem-of-arithmetic">The Fundmamental Theorem of Arithmetic</h4>
-<p>It’s hard to immediately see why <img src="https://latex.codecogs.com/png.latex?a%5E2"> being even requires <img src="https://latex.codecogs.com/png.latex?a"> to be even. We can prove this as a little lemma for ourselves, but if we had to write a proof by contradiction rather than study the existing one above, it might not be clear to even do this.</p>
-<p>The more fundamental principle here is the (Fundamental Theorem of Arithmetic)[https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic]. This tells us that any natural number has a unique representation as a product of primes each raised to some power: <img src="https://latex.codecogs.com/png.latex?n%20=%20%5Cprod_%7Bj=1%7D%5E%5Cinfty%20p_j%5E%7Be_j%7D"></p>
-<p>where <img src="https://latex.codecogs.com/png.latex?p_j"> is the <img src="https://latex.codecogs.com/png.latex?j">th prime number (2 is the first, 3 is the second, and so on) and <img src="https://latex.codecogs.com/png.latex?e_j"> is the exponent for that prime. For example, the <em>only</em> way to write 3 as a product of primes is <img src="https://latex.codecogs.com/png.latex?2%5E0%20%5Ccdot%203%5E1%20%5Ccdot%205%5E0%20%5Ccdot%20%5Cldots">; for 6 the product is <img src="https://latex.codecogs.com/png.latex?2%5E1%20%5Ccdot%203%5E1%20%5Ccdot%205%5E0%20%5Ccdot%20%5Cldots">.</p>
-<p>Now back in the proof we had <img src="https://latex.codecogs.com/png.latex?2b%5E2%20=%20a%5E2">, so it behooves us to figure out something about <img src="https://latex.codecogs.com/png.latex?a%5E2"> or <img src="https://latex.codecogs.com/png.latex?b%5E2">. Think about what happens to that prime product representation if you square it. Every (non-zero) exponent gets doubled: <img src="https://latex.codecogs.com/png.latex?(p_1%5E%7Be_1%7D%5Ccdot%20p_2%5E%7Be_2%7D%20%5Ccdot%20%5Cldots%20%5Ccdot%20p_n%5E%7Be_n%7D)%5E2%20=%20p_1%5E%7B2e_1%7D%20%5Ccdot%20p_2%5E%7B2e_2%7D%20%5Ccdot%20%5Cldots%20%5Ccdot%20p_n%5E%7B2e_n%7D"></p>
-<p><em>This</em> is why if <img src="https://latex.codecogs.com/png.latex?a%5E2"> is even then <img src="https://latex.codecogs.com/png.latex?a"> is even and <img src="https://latex.codecogs.com/png.latex?a%5E2"> has a factor of 4. Because if <img src="https://latex.codecogs.com/png.latex?a%5E2"> is even then it has 2 in its prime product, with an exponent of at least 2. To say <img src="https://latex.codecogs.com/png.latex?a%5E2"> is even means in its prime product the exponent on 2 must be at least 1, and because it’s a square we know its exponent is double its root’s exponent. This means <img src="https://latex.codecogs.com/png.latex?a%5E2"> has a factor of <img src="https://latex.codecogs.com/png.latex?2%5E2%20=%204"></p>
-</section>
-</section>
-<section id="repeating-this-proof-for-sqrt6" class="level3">
-<h3 class="anchored" data-anchor-id="repeating-this-proof-for-sqrt6">Repeating this proof for <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B6%7D"></h3>
-<p>Now, armed with FTOA, let’s prove <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B6%7D"> is irrational. Assume towards a contradiction that <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B6%7D"> is irrational. Then there are natural numbers <img src="https://latex.codecogs.com/png.latex?a,%20b"> such that <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B6%7D%20=%20a/b"> with <img src="https://latex.codecogs.com/png.latex?a"> and <img src="https://latex.codecogs.com/png.latex?b"> having no common factors. As in the previous proofs, square both sides and move <img src="https://latex.codecogs.com/png.latex?b%5E2"> to get <img src="https://latex.codecogs.com/png.latex?6b%5E2%20=%20a%5E2">. From this we have <img src="https://latex.codecogs.com/png.latex?2%5Ccdot3%5Ccdot%20b%5E2%20=%20a%5E2">. Now using what we know from the FTOA we know that <img src="https://latex.codecogs.com/png.latex?a%5E2"> must have factors of 2 and 3, and since it’s a square it must have factors of 4 and 9. So <img src="https://latex.codecogs.com/png.latex?6b%5E2%20=%2036c"> for some integer <img src="https://latex.codecogs.com/png.latex?c">, or more simply <img src="https://latex.codecogs.com/png.latex?b%5E2%20=%206c">, showing <img src="https://latex.codecogs.com/png.latex?b%5E2"> also has a factor of 6. This means both <img src="https://latex.codecogs.com/png.latex?a"> and <img src="https://latex.codecogs.com/png.latex?b"> have factors of 6 and they both have no common factors, a contradiction.</p>
-</section>
-<section id="proving-that-e-is-irrational" class="level3">
-<h3 class="anchored" data-anchor-id="proving-that-e-is-irrational">Proving that <img src="https://latex.codecogs.com/png.latex?e"> is irrational</h3>
-<p>To prove <img src="https://latex.codecogs.com/png.latex?e"> is irrational requires a bit more work but has a similar setup. First, let’s define <img src="https://latex.codecogs.com/png.latex?e"> by its series expansion and assume towards a contradiction that it’s rational, equal to <img src="https://latex.codecogs.com/png.latex?a/b"> in lowest terms:</p>
-<p><img src="https://latex.codecogs.com/png.latex?e%20=%20%5Csum_%7Bn=0%7D%5E%5Cinfty%20%5Cfrac%7B1%7D%7Bn!%7D%20=%20%5Cfrac%7Ba%7D%7Bb%7D"></p>
-<p>If we clear the denominator on the right by multiplying across by <img src="https://latex.codecogs.com/png.latex?b"> we get:</p>
-<p><img src="https://latex.codecogs.com/png.latex?eb%20=%20%5Csum_%7Bn=0%7D%5E%5Cinfty%20%5Cfrac%7Bb%7D%7Bn!%7D%20=%20a"></p>
-<p>Now what’s interesting about this is that <img src="https://latex.codecogs.com/png.latex?eb"> must be an integer, since it’s equal to <img src="https://latex.codecogs.com/png.latex?a">, and so must the series even though its terms have an <img src="https://latex.codecogs.com/png.latex?n!"> in the denominator. To achieve some more cancelation multiply by <img src="https://latex.codecogs.com/png.latex?b!"> instead of <img src="https://latex.codecogs.com/png.latex?b">, which still us with an integer:</p>
-<p><img src="https://latex.codecogs.com/png.latex?eb!%20=%20%5Csum%7Bn=0%7D%5E%5Cinfty%20%5Cfrac%7Bb!%7D%7Bn!%7D%20=%20a(b-1)!%20%5Cin%20%5Cmathbb%7BZ%7D"></p>
-<p>We don’t know the value <img src="https://latex.codecogs.com/png.latex?b">, but we know it’s an integer at least 1. So some of the series terms will have <img src="https://latex.codecogs.com/png.latex?n%20%5Cleq%20b"> and after that, we’ll have all <img src="https://latex.codecogs.com/png.latex?n%20%3E%20b">. So split the series into those two cases:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Csum_%7Bn=0%7D%5Eb%20%5Cfrac%7Bb!%7D%7Bn!%7D%20+%20%5Csum_%7Bk=1%7D%5E%5Cinfty%20%5Cfrac%7Bb!%7D%7B(b+k)!%7D"></p>
-<p>When <img src="https://latex.codecogs.com/png.latex?n%20%5Cleq%20b"> the fraction <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bb!%7D%7B(b+k)!%7D"> is an integer. So the sum on the left is a sum of integers and must also be an integer. That means the sum on the right has to be an integer; if not then it would contradict the result that <img src="https://latex.codecogs.com/png.latex?eb!"> is an integer.</p>
-<p>For the series on the right we have some constant numerator <img src="https://latex.codecogs.com/png.latex?b!"> and an ever-increasing denominator <img src="https://latex.codecogs.com/png.latex?(b+k)!"> which means all these terms are greater than 0 but less than 1. Of course, some series do evaluate to integers so we have to prove this one doesn’t in order to contradict that <img src="https://latex.codecogs.com/png.latex?eb!%20%5Cin%20%5Cmathbb%7BZ%7D">.</p>
-<p>You might notice that the denominator has factorial growth, which is extremely fast. And since this happens in the denominator it means the terms will get very small, very quickly. You might suspect that it converges to something less than 1, which means it isn’t an integer, and that would be our contradiction.</p>
-<p>First, notice that since the denominator is a higher factorial than the numerator we can cancel out terms: <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bb!%7D%7B(b+k)!%7D%20=%20%5Cfrac%7B1%7D%7B(b+1)%5Cldots(b+k)%7D"></p>
-<p>If we change the denominator so all the factors are <img src="https://latex.codecogs.com/png.latex?(b+1)"> then the denominator becomes smaller, which makes the value bigger. This gives us the relation:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7B(b+1)%5Cldots%20(b+k)%7D%20%5Cleq%20%5Cfrac%7B1%7D%7B(b+1)%5Ek%7D"></p>
-<p>With equality only when <img src="https://latex.codecogs.com/png.latex?k%20=%201">. In our series <img src="https://latex.codecogs.com/png.latex?k"> just starts at 1 then goes on to infinity, so we have a strict inequality between the sums:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Csum_%7Bk=1%7D%5E%5Cinfty%20%5Cfrac%7Bb!%7D%7B(b+k)!%7D%20%5Cleq%20%5Csum_%7Bk=1%7D%5E%5Cinfty%20%5Cfrac%7B1%7D%7B(b+1)%5Ek%7D"></p>
-<p>Notice the sum on the right is nearly a geometric series, only missing the <img src="https://latex.codecogs.com/png.latex?k%20=%200"> term. That term would simply evaluate to 1, so express the sum in terms of a geometric series:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Csum_%7Bk=1%7D%5E%5Cinfty%20%5Cfrac%7B1%7D%7B(b+1)%5Ek%7D%20=%20%5Csum_%7Bk=0%7D%5E%5Cinfty%20%5Cfrac%7B1%7D%7B(b+1)%5Ek%7D%20-%201%20=%20%5Cfrac%7B1%7D%7B1%20-%20%5Cfrac%7B1%7D%7Bb+1%7D%7D%20-%201"></p>
-<p>Do some algebra to simplify the result:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7B1%20-%20%5Cfrac%7B1%7D%7Bb+1%7D%7D%5Ccdot%5Cfrac%7Bb+1%7D%7Bb+1%7D%20-%201%5Ccdot%5Cfrac%7Bb%7D%7Bb%7D%20=%20%5Cfrac%7Bb+1%7D%7Bb%7D%20-%20%5Cfrac%7Bb%7D%7Bb%7D%20=%20%5Cfrac%7B1%7D%7Bb%7D"> <img src="https://latex.codecogs.com/png.latex?%5Cimplies%200%20%3C%20%20%5Csum_%7Bk=0%7D%5E%5Cinfty%20%5Cfrac%7Bb!%7D%7B(b+k)!%7D%20%3C%20%5Cfrac%7B1%7D%7Bb%7D"></p>
-<p>And here is our contradiction: the head sum plus the tail sum must be an integer and the head sum is an integer, but the tail sum is strictly between 0 and 1. This is a contradiction, because if the tail sum is less than 1 then adding it to the head sum will not make it an integer.</p>
-</section>
-<section id="proving-that-pi-is-irrational" class="level3">
-<h3 class="anchored" data-anchor-id="proving-that-pi-is-irrational">Proving that <img src="https://latex.codecogs.com/png.latex?%5Cpi"> is irrational</h3>
-
-
-</section>
-
- ]]></description>
-  <guid>https://benjaminb.github.io/posts/proof-by-contradiction/</guid>
-  <pubDate>Wed, 19 Nov 2025 20:10:49 GMT</pubDate>
 </item>
 </channel>
 </rss>

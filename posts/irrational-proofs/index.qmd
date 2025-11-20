@@ -1,17 +1,9 @@
 ---
-title: "Irrational Numbers Proof Techniques"
-draft: false
+title: "Irrational Proofs"
+draft: true
 ---
 
-Explain what it is
-
-Usually we do sqrt 2 and call it a day
-However this proof as it's usually presented usually skips a lot of details making it hard to generalize the principle. It finds a contradiction in parity between a and b
-Example: what happens if you try to prove root 3 is irrational?
-what happens when you try to prove root 6 is irrational?
-
-Prove e is irrational by contradiction
-Prove π is irrational?
+Actually, the proofs in this post are perfectly rational. It's a deep dive into *how* to prove numbers are irrational.
 
 The proof that $\sqrt{2}$ is irrational comes up in many places, often when explaining what a proof by contradiction is. Typically the proof goes like this: assume $\sqrt{2}$ is rational, so it can be written as $a/b$ which is a ratio of integers in lowest terms. You then demonstrated that both $a$ and $b$ are even, which contradicts the assumption that $a/b$ was in lowest terms to begin with.
 
