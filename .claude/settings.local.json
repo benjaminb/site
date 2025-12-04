@@ -1,6 +1,10 @@
 {
   "permissions": {
-    "allow": ["WebFetch(domain:quarto.org)", "WebFetch(domain:manim.community)"],
+    "allow": [
+      "WebFetch(domain:quarto.org)",
+      "WebFetch(domain:manim.community)",
+      "Bash(gh run:*)"
+    ],
     "deny": [],
     "ask": []
   }

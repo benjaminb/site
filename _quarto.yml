@@ -1,10 +1,10 @@
 project:
   type: website
   render:
-    - "*"
+    - '*'
 
-jupyter: web
-      
+jupyter: webenv
+
 website:
   title: 'Benjamin Basseri'
   navbar:
@@ -23,3 +23,4 @@ format:
       - brand
     css: styles.css
     toc: true
+    code-copy: hover
